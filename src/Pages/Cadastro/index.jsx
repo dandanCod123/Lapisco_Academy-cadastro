@@ -13,6 +13,9 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaKey } from "react-icons/fa6";
 
+import { useNavigate } from "react-router-dom";
+
+
 import "../../Global/global.css"
 
 
@@ -30,6 +33,8 @@ export const Register = () => {
   const [Lattes, setLattes] = useState("");
   const [github, setGithub] = useState("");
   const [linkedin, setLinkedin] = useState("");
+
+  const navigate = useNavigate();
 
 
   return (
@@ -202,7 +207,9 @@ export const Register = () => {
         </div>
 
         <div className="text-center2">
-          <span className="txt1">Já possui conta? </span>
+          <h3 className="txt1"
+          onClick={()=> {navigate("/")}}>
+            Já possui conta? </h3>
           
         </div>
       </form>
